@@ -7,12 +7,23 @@
     type="text"
     class="form-control"
     [(ngModel)]="serverName">
-</label>
-<p>{{serverName}}</p>
+
 <button
   class="btn btn-primary"
   [disabled]="!allowNewServer"
   (click)="onCreateServer()">Add server</button>
+</label>
+<label>Username
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="username">
+  <button
+    class="btn btn-primary"
+    [disabled]="username === ''"
+    (click)="username = ''">Reset username</button>
+</label>
+<p>{{username}}</p>
 <!--<p [innerText]="allowNewServer"></p>-->
 <p>{{serverCreationStatus}}</p>
 <app-server></app-server>
