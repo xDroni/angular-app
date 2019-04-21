@@ -16,8 +16,8 @@
 <br>
 <label>
   <button class="btn btn-primary" (click)="onClick()">Display details</button>
-  <p style="display: inline-block" *ngIf="detailsClicked">Secret: MEKIE!</p>
 </label>
+<p style="display: inline-block" *ngIf="detailsClicked">Secret: MEKIE!</p>
 <p *ngFor="let logItem of clicksArray; let i = index"
     [ngStyle]="{backgroundColor: i >=5 ? 'blue' : 'transparent'}"
     [ngClass]="{'white-text': i >= 5}">{{logItem}}</p>
